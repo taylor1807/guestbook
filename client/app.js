@@ -22,9 +22,15 @@ async function getMessages() {
     likeButton.addEventListener("click", function () {
       handleLike(message.id);
     });
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "x";
+    deleteButton.addEventListener("click", function () {
+      handleDelete(message.id);
+    });
     messageContainer.appendChild(messageInsert);
     messageContainer.appendChild(likeCount);
     messageContainer.appendChild(likeButton);
+    messageContainer.appendChild(deleteButton);
     messageBoardContainer.appendChild(messageContainer);
   });
 }
@@ -53,6 +59,17 @@ async function handleLike(messageId) {
     }
   );
   getMessages();
+}
+async function handleDelete(messageId) {
+  const response = await fetch(
+    `https://guestbook-server-xa3l.onrender.com/messages/${messageId}`,
+    {
+      method: "DELETE",
+    }
+  );
+  if (response.ok) {
+    getMessages();
+  }
 }
 form.addEventListener("submit", handlePostMessage);
 getMessages();

@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+#messageBoardContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+#formContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+.messageContainer {
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  font-size: 3vh;
+}
+h2 {
+  text-align: center;
+  font-size: 2vh;
+}
+span {
+  margin-right: 2vh;
+}
