@@ -3,7 +3,9 @@ const messageBoardContainer = document.getElementById("messageBoardContainer");
 const form = document.getElementById("messageForm");
 
 async function getMessages() {
-  const response = await fetch("http://localhost:8080/messages");
+  const response = await fetch(
+    "https://guestbook-server-xa3l.onrender.com/messages"
+  );
   const data = await response.json();
   console.log(data);
   messageBoardContainer.innerHTML = "";
@@ -33,7 +35,7 @@ async function handlePostMessage(event) {
   event.preventDefault();
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
-  await fetch("http://localhost:8080/messages", {
+  await fetch("https://guestbook-server-xa3l.onrender.com/messages", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -45,7 +47,7 @@ async function handlePostMessage(event) {
 }
 async function handleLike(messageId) {
   const response = await fetch(
-    `http://localhost:8080/messages/${messageId}/like`,
+    `https://guestbook-server-xa3l.onrender.com/messages/${messageId}/like`,
     {
       method: "POST",
     }
