@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Stack Guestbook</title>
+  </head>
+  <body>
+    <h1>Guestbook: Leave your messages here for others to see</h1>
+    <div id="mainContainer">
+      <div id="formContainer">
+        <form id="messageForm">
+          <input
+            type="text"
+            name="name"
+            id="nameInput"
+            placeholder="Name"
+            required
+          />
+          <input
+            type="text"
+            name="message"
+            id="messageInput"
+            placeholder="message"
+            required
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div id="messageBoardContainer"></div>
+    </div>
+  </body>
+</html>
