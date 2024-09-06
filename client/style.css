@@ -132,11 +132,9 @@ p {
     margin-left: 0;
     margin-right: 0;
   }
+  h1,
   h2 {
     color: transparent;
     text-shadow: none;
-  }
-  h1 {
-    rotate: 90deg;
   }
 }
