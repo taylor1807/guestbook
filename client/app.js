@@ -3,19 +3,19 @@ const messageBoardContainer = document.getElementById("messageBoardContainer");
 const form = document.getElementById("messageForm");
 
 const submitSound1 = new Audio(
-  "https://guestbook-client-eb8y.onrender.com//sounds/trap.mp3"
+  "https://guestbook-client-eb8y.onrender.com/sounds/trap.mp3"
 );
 const submitSound2 = new Audio(
-  "https://guestbook-client-eb8y.onrender.com//sounds/hello.mp3"
+  "https://guestbook-client-eb8y.onrender.com/sounds/hello.mp3"
 );
 const likeSound1 = new Audio(
-  "https://guestbook-client-eb8y.onrender.com//sounds/good.mp3"
+  "https://guestbook-client-eb8y.onrender.com/sounds/good.mp3"
 );
 const likeSound2 = new Audio(
-  "https://guestbook-client-eb8y.onrender.com//sounds/doit.mp3"
+  "https://guestbook-client-eb8y.onrender.com/sounds/doit.mp3"
 );
 const deleteSound = new Audio(
-  "https://guestbook-client-eb8y.onrender.com//sounds/faith.mp3"
+  "https://guestbook-client-eb8y.onrender.com/sounds/faith.mp3"
 );
 
 let useFirstSubmitSound = true;
