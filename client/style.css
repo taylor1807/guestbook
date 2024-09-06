@@ -3,6 +3,7 @@
 }
 body {
   height: 100vh;
+  background-color: darkseagreen;
 }
 #mainContainer {
   display: flex;
@@ -25,6 +26,8 @@ form {
 }
 .messageContainer {
   text-align: center;
+  background-color: tomato;
+  padding: 1vh;
 }
 h1 {
   text-align: center;
@@ -36,4 +39,49 @@ h2 {
 }
 span {
   margin-right: 2vh;
+  font-size: 2vh;
+}
+.deleteBtn {
+  font-size: 2vh;
+  margin-left: 2vh;
+  background-color: red;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.deleteBtn:hover,
+.likeBtn:hover,
+#submitBtn:hover {
+  background-color: black;
+  scale: 1.2;
+  cursor: pointer;
+  color: white;
+}
+.likeBtn {
+  font-size: 2vh;
+  background-color: blue;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#submitBtn {
+  font-size: 3vh;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2vh;
+}
+#nameInput,
+#messageInput {
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: wheat;
+  font-size: 3vh;
+  font-family: cursive;
+}
+p {
+  font-size: 3vh;
+  font-family: cursive;
 }

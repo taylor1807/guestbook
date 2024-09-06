@@ -46,10 +46,9 @@ app.delete("/messages/:id", async function (request, response) {
   const messageId = request.params.id;
   console.log("Deleting message with ID:", messageId);
 
-  const deleteResult = await db.query(
-    "DELETE FROM messages WHERE id = $1 RETURNING *",
-    [messageId]
-  );
+  const deleteResult = await db.query("DELETE FROM messages WHERE id = $1", [
+    messageId,
+  ]);
 
   console.log("Delete result:", deleteResult);
 

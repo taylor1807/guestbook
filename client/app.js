@@ -23,6 +23,7 @@ async function getMessages() {
       handleLike(message.id);
     });
     const deleteButton = document.createElement("button");
+    deleteButton.classList.add("deleteBtn");
     deleteButton.textContent = "x";
     deleteButton.addEventListener("click", function () {
       handleDelete(message.id);
