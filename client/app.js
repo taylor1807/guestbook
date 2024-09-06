@@ -2,11 +2,11 @@ console.log("test");
 const messageBoardContainer = document.getElementById("messageBoardContainer");
 const form = document.getElementById("messageForm");
 
-const submitSound1 = new Audio("./sounds/trap.mp3");
-const submitSound2 = new Audio("./sounds/hello.mp3");
-const likeSound1 = new Audio("./sounds/good.mp3");
-const likeSound2 = new Audio("./sounds/doit.mp3");
-const deleteSound = new Audio("./sounds/faith.mp3");
+const submitSound1 = new Audio("/sounds/trap.mp3");
+const submitSound2 = new Audio("/sounds/hello.mp3");
+const likeSound1 = new Audio("/sounds/good.mp3");
+const likeSound2 = new Audio("/sounds/doit.mp3");
+const deleteSound = new Audio("/sounds/faith.mp3");
 
 let useFirstSubmitSound = true;
 let useFirstLikeSound = true;
