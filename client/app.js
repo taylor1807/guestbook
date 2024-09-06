@@ -2,6 +2,15 @@ console.log("test");
 const messageBoardContainer = document.getElementById("messageBoardContainer");
 const form = document.getElementById("messageForm");
 
+const submitSound1 = new Audio("./assets/trap.mp3");
+const submitSound2 = new Audio("./assets/hello.mp3");
+const likeSound1 = new Audio("./assets/good.mp3");
+const likeSound2 = new Audio("./assets/doit.mp3");
+const deleteSound = new Audio("./assets/faith.mp3");
+
+let useFirstSubmitSound = true;
+let useFirstLikeSound = true;
+
 async function getMessages() {
   const response = await fetch(
     "https://guestbook-server-xa3l.onrender.com/messages"
@@ -21,12 +30,19 @@ async function getMessages() {
     likeButton.textContent = "Like";
     likeButton.addEventListener("click", function () {
       handleLike(message.id);
+      if (useFirstLikeSound) {
+        likeSound1.play();
+      } else {
+        likeSound2.play();
+      }
+      useFirstLikeSound = !useFirstLikeSound;
     });
     const deleteButton = document.createElement("button");
     deleteButton.classList.add("deleteBtn");
     deleteButton.textContent = "x";
     deleteButton.addEventListener("click", function () {
       handleDelete(message.id);
+      deleteSound.play();
     });
     messageContainer.appendChild(messageInsert);
     messageContainer.appendChild(likeCount);
@@ -49,6 +65,12 @@ async function handlePostMessage(event) {
     },
     body: JSON.stringify(data),
   });
+  if (useFirstSubmitSound) {
+    submitSound1.play();
+  } else {
+    submitSound2.play();
+  }
+  useFirstSubmitSound = !useFirstSubmitSound;
   form.reset();
   getMessages();
 }
