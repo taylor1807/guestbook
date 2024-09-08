@@ -60,5 +60,5 @@ app.delete("/messages/:id", async function (request, response) {
 });
 
 app.listen(8080, function () {
-  console.log("App is running at render.com");
+  console.log("Local app is running on port 8080");
 });
